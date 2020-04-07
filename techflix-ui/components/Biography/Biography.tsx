@@ -10,8 +10,8 @@ interface BiographyProps {
     biography: string;
 }
 
-interface SynopsisProps {
-    synopsis: string;
+interface OverviewProps {
+    overview: string;
 }
 
 const ParagraphSection: FunctionComponent<ParagraphProps> = ({title, paragraph}) => {
@@ -27,6 +27,6 @@ export const Biography: FunctionComponent<BiographyProps> = ({biography}) => {
     return <ParagraphSection title="Biography" paragraph={biography}/>;    
 };
 
-export const Synopsis: FunctionComponent<SynopsisProps> = ({synopsis}) => {
-    return <ParagraphSection title="Synopsis" paragraph={synopsis}/>
+export const Overview: FunctionComponent<OverviewProps> = ({overview}) => {
+    return <ParagraphSection title="Overview" paragraph={overview}/>
 };

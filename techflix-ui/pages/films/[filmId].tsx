@@ -4,7 +4,7 @@ import {Page} from "../../components/Page/Page";
 import {useRouter} from "next/router";
 import {FilmHero} from "../../components/Hero/Hero";
 import {SidebarLayout} from "../../components/SidebarLayout/SidebarLayout";
-import {Synopsis} from "../../components/Biography/Biography";
+import {Overview} from "../../components/Biography/Biography";
 import {FilmFacts} from "../../components/KeyFacts/FilmFacts";
 import {CastList} from "../../components/CastList/CastList";
 import {SimilarFilms} from "../../components/SimilarFilms/SimilarFilms";
@@ -26,7 +26,7 @@ interface FilmProps {
 
 const Film : NextPage<FilmProps> = ({film, cast, similarFilms}) => {
     const main = <div>
-        <Synopsis synopsis={film.synopsis}/>
+        <Overview overview={film.overview}/>
         <CastList cast={cast}/>
         <SimilarFilms films={similarFilms}/>
     </div>;

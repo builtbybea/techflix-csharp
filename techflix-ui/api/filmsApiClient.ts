@@ -11,7 +11,7 @@ export interface FilmModel {
     posterImageUrl: string;
     budget: number;
     homePage: string;
-    synopsis: string;
+    overview: string;
     releaseDate: string;
     revenue: number;
     runtime: number;

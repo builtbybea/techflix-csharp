@@ -1,4 +1,5 @@
-﻿using TechFlixApi.Models.Catelogue;
+﻿using System.Collections.Generic;
+using TechFlixApi.Models.Catelogue;
 using TechFlixApi.Models.Metadata;
 
 namespace TechFlixApi.Models.Response
@@ -15,6 +16,8 @@ namespace TechFlixApi.Models.Response
         public string ProfileImageUrl { get; set; }
         public string HomePage { get; set; }
         
+        public IEnumerable<string> AlsoKnownAs { get; set; }
+        
         public static Person Create(CataloguePerson cataloguePerson, PersonMetadata personMetadata)
         {
             return new Person
@@ -28,6 +31,7 @@ namespace TechFlixApi.Models.Response
                 Popularity = personMetadata.Popularity,
                 ProfileImageUrl = $"https://image.tmdb.org/t/p/original/{personMetadata.ProfilePath}",
                 HomePage = personMetadata.HomePage,
+                AlsoKnownAs = personMetadata.AlsoKnownAs,
             };
         }
     }

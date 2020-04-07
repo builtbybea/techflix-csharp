@@ -12,7 +12,7 @@ namespace TechFlixApi.Models.Response
         public string PosterImageUrl { get; set; }
         public long Budget { get; set; }
         public string HomePage { get; set; }
-        public string Synopsis { get; set; }
+        public string Overview { get; set; }
         public string ReleaseDate { get; set; }
         public long Revenue { get; set; }
         public int Runtime { get; set; }
@@ -28,7 +28,7 @@ namespace TechFlixApi.Models.Response
                 PosterImageUrl = $"https://image.tmdb.org/t/p/original/{metadataFilm.PosterPath}",
                 Budget = metadataFilm.Budget,
                 HomePage = metadataFilm.HomePage,
-                Synopsis = metadataFilm.Synopsis,
+                Overview = metadataFilm.Overview,
                 ReleaseDate = metadataFilm.ReleaseDate,
                 Revenue = metadataFilm.Revenue,
                 Runtime = metadataFilm.Runtime,
