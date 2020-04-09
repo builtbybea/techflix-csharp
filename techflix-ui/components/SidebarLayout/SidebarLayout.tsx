@@ -12,7 +12,7 @@ export const SidebarLayout: FunctionComponent<SidebarLayoutProps> = ({title, sub
     return (
         <div className={styles.layout}>
             <div>
-                <h1 className={styles.title}>{title}</h1>
+                <h1 data-test-id="film-title" className={styles.title}>{title}</h1>
                 <h2 className={styles.subtitle}>{subtitle}</h2>
             </div>
             {sidebar}
